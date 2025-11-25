@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="XmlFileProcessor/XmlFileProcessor.csproj" Id="a41ce664-624c-46fe-ad81-297c2c07be90" />
   <Project Path="XsdGenerator.Client/XsdGenerator.Client.csproj" />
   <Project Path="XsdGenerator/XsdGenerator.csproj" />
 </Solution>
