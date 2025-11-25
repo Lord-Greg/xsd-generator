@@ -11,13 +11,13 @@
     Currently loaded file:
     <br/>
     <ul>
-        <li>Name: @XmlProcessor?.FileName</li>
-        <li>Size: @XmlProcessor?.FileSizeMB MB</li>
+        <li>Name: @XmlProcessor.FileName</li>
+        <li>Size: @XmlProcessor.FileSizeMB MB</li>
     </ul>
 </p>
 
 @code {
-    public XmlFileProcessor? XmlProcessor { get; set; }
+    public XmlFileProcessor XmlProcessor { get; set; } = XmlFileProcessor.Empty;
 
     private void LoadFiles(InputFileChangeEventArgs e)
     {
