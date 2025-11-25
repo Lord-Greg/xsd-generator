@@ -1,0 +1,28 @@
+﻿@rendermode InteractiveWebAssembly
+
+<p>
+    Enter your XML file here:
+    <br/>
+    <InputFile OnChange="LoadFiles" />
+</p>
+
+<p>
+    Currently loaded file:
+    <br/>
+    <ul>
+        <li>Name: @FileName</li>
+        <li>Size: @FileSizeMB MB</li>
+    </ul>
+</p>
+
+@code {
+    public string FileName { get; set; } = "<None>";
+    public long FileSize { get; set; }
+    public long FileSizeMB => FileSize / 1024 / 1024;
+
+    private void LoadFiles(InputFileChangeEventArgs e)
+    {
+        FileName = e.File.Name;
+        FileSize = e.File.Size;
+    }
+}
