@@ -1,4 +1,3 @@
-using XsdGenerator.Client.Pages;
 using XsdGenerator.Components;
 
 var builder = WebApplication.CreateBuilder(args);
