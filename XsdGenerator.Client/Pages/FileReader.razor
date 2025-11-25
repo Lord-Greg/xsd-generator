@@ -1,4 +1,5 @@
-﻿@rendermode InteractiveWebAssembly
+﻿@using XmlFileProcessor;
+@rendermode InteractiveWebAssembly
 
 <p>
     Enter your XML file here:
@@ -10,19 +11,16 @@
     Currently loaded file:
     <br/>
     <ul>
-        <li>Name: @FileName</li>
-        <li>Size: @FileSizeMB MB</li>
+        <li>Name: @XmlProcessor?.FileName</li>
+        <li>Size: @XmlProcessor?.FileSizeMB MB</li>
     </ul>
 </p>
 
 @code {
-    public string FileName { get; set; } = "<None>";
-    public long FileSize { get; set; }
-    public long FileSizeMB => FileSize / 1024 / 1024;
+    public XmlFileProcessor? XmlProcessor { get; set; }
 
     private void LoadFiles(InputFileChangeEventArgs e)
     {
-        FileName = e.File.Name;
-        FileSize = e.File.Size;
+        XmlProcessor = new XmlFileProcessor(e.File);
     }
 }
