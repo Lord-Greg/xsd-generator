@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="XsdGenerator.Client/XsdGenerator.Client.csproj" />
+  <Project Path="XsdGenerator/XsdGenerator.csproj" />
+</Solution>
